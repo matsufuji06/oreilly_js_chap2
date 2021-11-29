@@ -4,8 +4,9 @@ $(document).ready(function() {
   paper.setup(document.getElementById('mainCanvas'));
 
   /* ここで描画する*/
+  let c = Shape.Circle(200, 200, 50);
+  c.fillColor = 'green';
 
-  
   paper.view.draw();
-
+  console.log('読み込み完了。')
 });
