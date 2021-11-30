@@ -16,11 +16,22 @@ $(document).ready(function() {
 
   let tool = new Tool();
 
+  // クリックしたところに円を表示
   tool.onMouseDown = function(event) {
     let c = Shape.Circle(event.point.x, event.point.y, 20);
     c.fillColor = 'green';
   };
-
+  
+  // Hello World
+  let c = Shape.Circle(200, 200, 80);
+  c.fillColor = 'black';
+  
+  let text = new PointText(200, 200);
+  text.justification = 'center';
+  text.fillColor = 'white';
+  text.fontSize = 20;
+  text.content = 'hello world';
+  
   paper.view.draw();
   console.log('読み込み完了。')
 });
